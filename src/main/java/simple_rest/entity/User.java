@@ -8,6 +8,11 @@ public class User {
     private int age;
 
     private List<Advertise> owner;
+    private List<Society> societyList;
+
+    public List<Society> getSocietyList() {
+        return societyList;
+    }
 
     public User(String nickname, int age) {
         this.nickname = nickname;
@@ -47,5 +52,9 @@ public class User {
 
     public void setOwner(List<Advertise> owner) {
         this.owner = owner;
+    }
+
+    public void setSocietyList(List<Society> societyList) {
+        this.societyList = societyList;
     }
 }

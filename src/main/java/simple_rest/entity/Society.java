@@ -7,6 +7,15 @@ public class Society {
     private String heading;
 
     private List<User> usersSociety;
+    private List<Society> userList;
+
+    public void setUserList(List<Society> userList) {
+        this.userList = userList;
+    }
+
+    public List<Society> getUserList() {
+        return userList;
+    }
 
     public Society(String heading) {
         this.heading = heading;
