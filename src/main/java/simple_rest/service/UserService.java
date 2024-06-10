@@ -1,28 +1,38 @@
 package simple_rest.service;
 
+import simple_rest.entity.Many2ManyEntity;
+import simple_rest.entity.One2ManyEntity;
 import simple_rest.entity.User;
-import simple_rest.repository.ConnectionDB;
+import simple_rest.repository.*;
 import java.util.List;
 
 public class UserService {
 
     public List<User> findAll(){
-        return ConnectionDB.findAll();
+        return UserDAO.findAll();
     }
 
     public User findById(int id) {
-        return ConnectionDB.findById(id);
+        return UserDAO.findById(id);
     }
 
     public void saveUser(User user) {
-        ConnectionDB.saveUser(user);
+        UserDAO.saveUser(user);
     }
 
     public void updateUser(int userId, User user) {
-        ConnectionDB.updateUser(userId, user);
+        UserDAO.updateUser(userId, user);
     }
 
     public void deleteUser(int userId) {
-        ConnectionDB.deleteUser(userId);
+        UserDAO.deleteUser(userId);
+    }
+
+    public List<One2ManyEntity> getOne2Many() {
+        return UserDAO.getOne2Many();
+    }
+
+    public List<Many2ManyEntity> getMany2Many() {
+        return UserDAO.getMany2Many();
     }
 }

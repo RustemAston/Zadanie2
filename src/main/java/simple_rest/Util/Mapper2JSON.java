@@ -11,6 +11,5 @@ public class Mapper2JSON {
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
-
     }
 }

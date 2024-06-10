@@ -2,7 +2,6 @@ package simple_rest.entity;
 
 public class Advertise {
     private int id;
-
     private String title;
 
     private User user;

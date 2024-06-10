@@ -1,15 +1,11 @@
 package simple_rest.dto;
 
-public class UserDTO {
+public class Many2ManyEntityDTO {
     private String nickname;
     private int age;
+    private String heading;
 
-    public UserDTO(String nickname, int age) {
-        this.nickname = nickname;
-        this.age = age;
-    }
-
-    public UserDTO() {
+    public Many2ManyEntityDTO() {
     }
 
     public String getNickname() {
@@ -20,11 +16,19 @@ public class UserDTO {
         return age;
     }
 
+    public String getHeading() {
+        return heading;
+    }
+
     public void setNickname(String nickname) {
         this.nickname = nickname;
     }
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public void setHeading(String heading) {
+        this.heading = heading;
     }
 }

@@ -1,0 +1,5 @@
+#Spring Boot
+flyway:
+      username: ${CONTAINER.USERNAME}
+      password: ${CONTAINER.PASSWORD}
+      url: ${CONTAINER.URL}

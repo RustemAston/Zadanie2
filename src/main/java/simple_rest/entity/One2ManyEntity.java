@@ -1,20 +1,13 @@
 package simple_rest.entity;
 
-import java.util.List;
-
-public class User {
+public class One2ManyEntity {
     private int id;
     private String nickname;
     private int age;
+    private int user_id;
+    private String title;
 
-    private List<Advertise> owner;
-
-    public User(String nickname, int age) {
-        this.nickname = nickname;
-        this.age = age;
-    }
-
-    public User() {
+    public One2ManyEntity() {
     }
 
     public int getId() {
@@ -29,8 +22,12 @@ public class User {
         return age;
     }
 
-    public List<Advertise> getOwner() {
-        return owner;
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public void setId(int id) {
@@ -45,7 +42,11 @@ public class User {
         this.age = age;
     }
 
-    public void setOwner(List<Advertise> owner) {
-        this.owner = owner;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
