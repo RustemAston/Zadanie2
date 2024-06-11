@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('SCM Checkout') {
             steps {
-                git branch: 'main', credentialsId: 'jk-gh-tk', url: '<https://github.com/**devopscloudbootcamp**/jk-private-gh.git>'
+                git branch: 'master', url: '<https://github.com/RustemAston/Zadanie2>'
             }
         }
     }
