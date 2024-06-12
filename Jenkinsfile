@@ -17,8 +17,7 @@ pipeline {
             steps {
                 // Build steps here, e.g., using Maven or Gradle
                 echo 'Building the project...'
-                // sh 'mvn clean install' // Uncomment and modify this line based on your build tool
-            }
+                    docker { image 'maven:3.9.7-eclipse-temurin-17-alpine' }            }
         }
 
         stage('Test') {
