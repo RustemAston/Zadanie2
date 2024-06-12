@@ -14,10 +14,10 @@ pipeline {
         }
 
         stage('Build') {
+                agent { docker { image 'maven:3.9.7-eclipse-temurin-17-alpine' } }
             steps {
-                // Build steps here, e.g., using Maven or Gradle
-                echo 'Building the project...'
-                    docker { image 'maven:3.9.7-eclipse-temurin-17-alpine' }            }
+                sh 'mvn --version'
+                }
         }
 
         stage('Test') {
