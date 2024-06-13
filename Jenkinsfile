@@ -16,15 +16,16 @@ pipeline {
         stage('Build') {
                 agent { docker { image 'maven:3.9.7-eclipse-temurin-17-alpine' } }
             steps {
-                sh 'mvn --version'
+                git branch: 'main', url: 'https://github.com/RustemAston/Zadanie2.git'
+
+                // line to start Maven on Ubuntu
+                sh "mvn -DskipTests=true package" 
                 }
         }
 
         stage('Test') {
             steps {
-                // Test steps here
-                echo 'Running tests...'
-                // sh 'mvn test' // Uncomment and modify this line based on your test tool
+                sh "cp /var/lib/jenkins/workspace/simple_rest2.war /opt/tomcat/webapps/"
             }
         }
 
