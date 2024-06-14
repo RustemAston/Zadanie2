@@ -27,7 +27,9 @@ pipeline {
                 script {
                     def warFile = opt/tomcat/webapps/simple_rest_war2.war
                     def tomcatDeployUrl = "${env.TOMCAT_URL}/manager/text/deploy?path=/your-app&update=true"
-                    
+                    sh """
+                            curl -u --upload-file ${warFile} ${tomcatDeployUrl}
+                    """
                 }
             }
         }
