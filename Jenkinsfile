@@ -25,7 +25,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh "cp /var/lib/jenkins/workspace/simple_rest_war2.war /opt/tomcat/webapps/"
+                sh "cp /var/lib/jenkins/workspace/simple_rest.jar /opt/tomcat/webapps/"
             }
         }
 
